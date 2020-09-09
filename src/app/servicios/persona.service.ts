@@ -24,4 +24,9 @@ export class PersonaService{
         return this.httpClient.put(this.personaUrl + 'persona/' + idPersona, JSON.stringify(persona), this.httpOptions);
     }
 
-}
+    borrarPersona( idPersona ){
+        return this.httpClient.delete(this.personaUrl + 'persona/' + idPersona, this.httpOptions);
+      }
+
+      
+} 	

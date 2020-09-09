@@ -53,7 +53,10 @@ export class PersonaComponent implements OnInit {
   }
 
   borrarPersona(persona: any){
-    // debugger
+    this.idPersona = persona._id;
+    this.personaService.borrarPersona(this.idPersona).subscribe( result  => {
+      console.log("Persona borrada: ", persona)
+    });
   }
   
   cargarPersona(){
