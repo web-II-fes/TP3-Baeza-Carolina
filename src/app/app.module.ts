@@ -14,12 +14,15 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { PersonaService } from './servicios/persona.service';
+import { CursoComponent } from './curso/curso.component';
+import { CursoService } from './servicios/curso.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonaComponent,
+    CursoComponent,
     
   ],
   imports: [
@@ -34,7 +37,7 @@ import { PersonaService } from './servicios/persona.service';
     MatInputModule
 
   ],
-  providers: [PersonaService],
+  providers: [PersonaService,CursoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
