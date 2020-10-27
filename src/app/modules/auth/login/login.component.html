@@ -1,0 +1,19 @@
+
+    <h1>Login</h1>
+  
+        <form [formGroup]='itemForm' (ngSubmit)=submit()>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="Nombre de Usuario" type="text" formControlName="username" >
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput placeholder="Contraseña" type="password" formControlName="password">
+            </mat-form-field>
+
+            <button mat-raised-button>Ingresar</button>
+            <button mat-raised-button routerLink="/registro" routerLinkActive="active">Registrarse</button>
+        </form>
+

@@ -9,6 +9,7 @@ export class CursoService{
         })
     }
     private cursoUrl = 'http://localhost:3002/api/modules/cursos/';
+   
 
     constructor(private httpClient: HttpClient){}
 
@@ -28,5 +29,9 @@ export class CursoService{
         return this.httpClient.delete(this.cursoUrl + 'curso/' + idCurso, this.httpOptions);
       }
 
+    getCursoById(idCurso: String){
+        return this.httpClient.get(this.cursoUrl + 'cursoId/' + idCurso);
+    }  
+    
       
 } 	
